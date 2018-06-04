@@ -6,6 +6,8 @@ WORKDIR "/opt/app"
 
 RUN mix local.hex --force && mix local.rebar --force
 
+ENV PORT=4000
+
 COPY config/* config/
 COPY mix.exs mix.lock ./
 RUN mix do deps.get, deps.compile

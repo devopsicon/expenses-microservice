@@ -10,6 +10,15 @@ Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
 
 Ready to run in production? Please [check our deployment guides](http://www.phoenixframework.org/docs/deployment).
 
+## Environmental Variables
+
+Two variables need to be defined as environmental variables for Phoenix application 
+
+A sample .env file content is as below:
+
+export PORT=4000
+export DATABASE_URL=postgres://postgres:postgres@localhost:5432/expenses_api_dev
+
 ## Learn more
 
   * Official website: http://www.phoenixframework.org/

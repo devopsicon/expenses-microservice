@@ -7,7 +7,7 @@ use Mix.Config
 # watchers to your application. For example, we use it
 # with brunch.io to recompile .js and .css sources.
 config :expenses_api, ExpensesMicroserviceWeb.Endpoint,
-  http: [port: 4000],
+  http: [port: System.get_env("PORT")],
   debug_errors: false,
   code_reloader: true,
   check_origin: false,
@@ -39,8 +39,6 @@ config :phoenix, :stacktrace_depth, 20
 # Configure your database
 config :expenses_api, ExpensesMicroservice.Repo,
   adapter: Ecto.Adapters.Postgres,
-  username: "postgres",
-  password: "postgres",
-  database: "expenses_api_dev",
-  hostname: "192.168.0.10",
+  url: System.get_env("DATABASE_URL"),
+  ssl: true,
   pool_size: 10
