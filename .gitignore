@@ -1,14 +1,16 @@
-.gradle
-/build/
+# App artifacts
+/_build
+/db
+/deps
+/*.ez
 
-# Ignore Gradle GUI config
-gradle-app.setting
+# Generated on crash by the VM
+erl_crash.dump
 
-# Avoid ignoring Gradle wrapper jar file (.jar files are usually ignored)
-!gradle-wrapper.jar
-
-# Cache of project
-.gradletasknamecache
-
-# # Work around https://youtrack.jetbrains.com/issue/IDEA-116898
-# gradle/wrapper/gradle-wrapper.properties
+# Files matching config/*.secret.exs pattern contain sensitive
+# data and you should not commit them into version control.
+#
+# Alternatively, you may comment the line below and commit the
+# secrets files as long as you replace their contents by environment
+# variables.
+/config/*.secret.exs
